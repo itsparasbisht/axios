@@ -11,6 +11,10 @@ function Posts() {
     return <h1>Loading...</h1>;
   }
 
+  if (error.code === "ECONNABORTED") {
+    return <h1>Timeout!</h1>;
+  }
+
   if (error) {
     return <h1>Error!</h1>;
   }
