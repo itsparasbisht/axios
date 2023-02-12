@@ -16,7 +16,13 @@ function Posts() {
   }
 
   if (response) {
-    return <div>Posts</div>;
+    return (
+      <div>
+        {response.data.map((item) => (
+          <h1>{`${item.id} - ${item.title}`}</h1>
+        ))}
+      </div>
+    );
   }
 }
 
